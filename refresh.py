@@ -22,8 +22,8 @@ for root , dirs , files in os.walk("./"):
     #print(["root is %s"%("/".join(str(join(root,name)).split("\\") ) )[1:]for name in files])
     hrefs = hrefs+[("/".join(str(join(root,name)).split("\\") ) )[1:]for name in files]
     names=names+files
-    if ".git" in dirs:
-        for i in REMOVE_LIST:
+    for i in REMOVE_LIST:
+        if i in dirs:
             dirs.remove(i)
 print(len(names),len(hrefs),names,hrefs)
 head=["<html>","<head>","<meta charset=\"utf-8\">","<title>目录</title>","</head>","<body>"]
