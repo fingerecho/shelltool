@@ -40,7 +40,7 @@ def main_process(path_:str,force=""):
     print(res_)
     print("commit finished \n%s\n"%SEPLINE)
     res_0 = call([cmd[0],cmd[3],force])
-    print("%s\nAdding result\n%s\n"%SEPLINE)
+    print("%s\nAdding result\n%s\n"%(res_0,SEPLINE))
 
 
 
