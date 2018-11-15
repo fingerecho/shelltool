@@ -45,6 +45,7 @@ def main_process(path_:str,force=""):
 
 
 if __name__ == "__main__":
+    print("starting push all \n%s\n"%SEPLINE)
     if len(argv) > 1 :
         main_process(path_=".",force=argv[1])
     else:
